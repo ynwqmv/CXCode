@@ -23,10 +23,6 @@ int HexFunction::GETHASH(){
 
 	cout << gethashstr << endl; 
 
-	
-	
-	
-
 	cout<< sizeof(gethashstr) << "- size of gethashstr"<< endl;
 	cout<< sizeof(c) << "- size of c"<< endl;
 	cout<< sizeof(strhash) << "- size of strhash"<< endl;
