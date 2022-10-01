@@ -7,13 +7,13 @@ using namespace std;
 
 class HexFunction {
 public:
-	static int GETHASH(); // ჰეშის ფუნქცია | hash function | return 
+	int GETHASH(); // ჰეშის ფუნქცია | hash function | return 
 protected:
 	string strhash; // გარდამქმნელი string | string 
 };
 
 // კლასის ფუნქციის რეალიზაცია | class function realisation 
-static int HexFunction::GETHASH(){
+int HexFunction::GETHASH(){
 	cout << "> ";
 	string c;
 	cin >> c; // getline(cin,c) for strings
