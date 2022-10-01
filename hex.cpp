@@ -1,33 +1,34 @@
 #include <iostream>
-#include <string>
+#include <string> 
 #include <cstdint>
-#include <sha2>
+#include <sha2> // ჰეშის ალგორითმი | hash algorithm | sha512
 
 using namespace std;
 
 class HexFunction {
 public:
-	int GETHASH();
+	static int GETHASH(); // ჰეშის ფუნქცია | hash function | return 
 protected:
-	string strhash;
+	string strhash; // გარდამქმნელი string | string 
 };
 
-int HexFunction::GETHASH(){
+// კლასის ფუნქციის რეალიზაცია | class function realisation 
+static int HexFunction::GETHASH(){
 	cout << "> ";
 	string c;
-	cin >> c;
+	cin >> c; // getline(cin,c) for strings
 
-	string gethashstr = sha512(c);
+	string gethashstr = sha512(c); // string-ის ჰეშში გარდაქმნა | string in hash
 
-	cout << gethashstr;
+	cout << gethashstr; 
 
-	return 0;
+	return 0; // return EXIT_SUCCESS;
 }
 
 
 int main(int argc, char const *argv[])
 {
-	HexFunction hex;
+	HexFunction hex; 
 	hex.GETHASH();
 	return 0;
 }
